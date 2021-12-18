@@ -1,5 +1,33 @@
 nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: $verticalMargin;
+    margin-right: $verticalMargin;
     img{
         height: 3rem;
+    }
+
+    li{
+        display: flex;
+        flex-direction: row;
+        font-size: $fontMed;
+        ul{
+            color: $desWhite;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &:hover{
+                color:$white
+            }
+        }
+      
+    }
+    
+    a{
+        font-family: sans-serif;
+    text-decoration: none;
+    color: white
     }
 }

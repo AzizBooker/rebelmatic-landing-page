@@ -52,13 +52,88 @@ table {
   border-spacing: 0;
 }
 
-html {
-  background-image: url("../images/heroimage.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+body {
+  height: 100%;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 nav img {
   height: 3rem;
+}
+
+nav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1rem;
+}
+
+nav li ul {
+  color: #e9ecef;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav li ul:hover {
+  color: #f8f9fa;
+}
+
+nav a {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+#home-background-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+}
+
+#shop-now-button-container {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+}
+
+#shop-now-button {
+  font-size: 1rem;
+  padding: 1em 2rem;
+  color: #f8f9fa;
+  background-color: #343a40;
+  border-radius: 2px;
+  border: none;
+}
+
+#shop-now-button:hover {
+  cursor: pointer;
+  background-color: #212529;
 }
 /*# sourceMappingURL=style.css.map */
