@@ -1,4 +1,246 @@
 body{
  height: 100%;
-  
+background-color:$black;
+}
+
+h1{
+    font-size: $fontLarge;
+    font-family: sans-serif;
+    color: $desWhite;
+
+    &:hover{
+        color:$white
+    }
+}
+.container{
+
+    &-padding{
+
+        &-hor{
+            padding-left: $defaultPadding;
+            padding-right: $defaultPadding;
+        }
+        &-ver{
+            padding-top: $defaultPadding;
+            padding-right: $defaultPadding;
+        }
+        &-all{
+            padding: $defaultPadding $defaultPadding;
+        }
+    }
+    &-margin{
+        &-mar{
+            &-hor{
+                margin-left: $defaultMargin;
+                margin-right: $defaultMargin;
+            }
+            &-ver{
+                margin-top: $defaultMargin;
+                margin-right: $defaultMargin;
+            }
+            &-all{
+                margin: $defaultMargin $defaultMargin;
+            }
+        }
+    }
+    &-full{
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+.text{
+    &-center{
+        text-align: center;
+    }
+    &-left{
+        text-align: left;
+    }
+    &-right{
+        text-align: right;
+    }
+}
+.grid{
+    
+    &-col{
+        &-2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @include breakpoint-down('medium'){
+          
+                display: flex;
+                 flex-direction: column;
+             }
+            
+        }
+        &-3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            @include breakpoint-down('medium'){
+                grid-template-columns: 1fr 1fr;
+             }
+             @include breakpoint-down('small'){
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+             }
+            
+        }
+        &-4{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            @include breakpoint-down('medium'){
+                grid-template-columns: 1fr 1fr;
+
+             }
+             @include breakpoint-down('small'){
+                 display: flex;
+                 justify-content: center;
+                 flex-direction: column;
+             }
+            
+        }
+        &-6{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            @include breakpoint-down('medium'){
+          
+                display: flex;
+                 flex-direction: column;
+             }
+            
+        }
+        &-12{
+            grid-template-columns: repeat((12,1fr));
+            @include breakpoint-down('medium'){
+          
+                display: flex;
+                 flex-direction: column;
+             }
+            
+        }
+    }
+    &-row{
+        &-2{
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            @include breakpoint-down('medium'){
+          
+                display: flex;
+                 flex-direction: column;
+             }
+            
+        }
+        &-4{
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            @include breakpoint-down('medium'){
+          
+                display: flex;
+                 flex-direction: column;
+             }
+            
+        }
+        &-6{
+            display: grid;
+            grid-template-rows: repeat(6,1fr);
+            @include breakpoint-down('medium'){
+          
+                display: flex;
+                 flex-direction: column;
+             }
+            
+        }
+        &-12{
+            display: grid;
+            grid-template-rows: repeat((12,1fr));
+            @include breakpoint-down('medium'){
+          
+                display: flex;
+                 flex-direction: column;
+             }
+            
+        }
+    }
+}
+
+.flex{
+    
+    &-jc{
+        
+        &-c{
+        justify-content: center;
+        display: flex;
+        }
+        
+        &-fs{
+        justify-content:flex-start;
+        display: flex;
+        }
+        
+        &-fe{
+        justify-content: flex-end;
+        display: flex;
+        }
+        &-sa{
+        justify-content:space-around;
+        display: flex;
+        }
+        &-sb{
+        justify-content:space-between;
+        display: flex;
+        }
+        
+        
+    }
+
+    &-ai{
+        &-c{
+            align-items: center;
+            display: flex;
+            }
+            
+            &-fs{
+            align-items:flex-start;
+            display: flex;
+            }
+            
+            &-fe{
+            align-items: flex-end;
+            display: flex;
+            }
+            &-sa{
+            align-items:space-around;
+            display: flex;
+            }
+            &-sb{
+            align-items:space-between;
+            display: flex;
+            }
+            
+    }
+    
+}
+
+
+.hide-for-desktop{
+    @include breakpoint-up('large'){
+        display: none  !important;
+    }
+}
+
+.hide-for-mobile{
+    @include breakpoint-down('medium'){
+        display: none  !important;
+    }
+}
+
+.no-scroll{
+    overflow: hidden;
+    &-x{
+        overflow-x: hidden;
+    }
+    &-y{
+        overflow-y: hidden;
+    }
 }

@@ -28,6 +28,14 @@ nav{
     a{
         font-family: sans-serif;
     text-decoration: none;
-    color: white
+    color: $white
+    }
+    .fa-bars{
+       color: $desWhite;
+       
+
+       &:hover{
+           color:$white
+       }
     }
 }

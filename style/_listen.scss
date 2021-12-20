@@ -1,0 +1,29 @@
+.body-listen{
+    display: flex;
+    justify-content: center;
+
+
+    img{
+        width:  90%;
+        height: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform ease-in .2s;
+        &:hover{
+            transform: scale(1.1);
+
+        }
+        @include breakpoint-down('small'){
+            width: 80%;
+            height: 80%;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    .music-albulms{
+        
+        
+    }
+
+
+}
