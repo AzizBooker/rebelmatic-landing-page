@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Rebelmatic | Contact</title>
 </head>
-<body class="contact-body">
-    <section class= grid-col-2">
+<body class="contact-body no-scroll">
+    <section class="grid-col-2" >
         <div>
             <img src="./images/Ghost in the Shadows.jpg" alt="Ghost in the Shadows Image">
         </div>
-        <div class="contact-form">
-            
+        <div class="contact-container" >
+          <!--  <a href = "mailto: bookeraziz@gmail.com">Send Email</a> -->
+            <form class="contact-form" action="">
+                <h1 class="text-center">Contact us</h1>
+                
+                <label for="email">Your Email</label>
+                <input type="text" name="email" id="email">
+                <label for="subject" >Subject</label>
+                <input type="text" name="subject" id="subject">
+                
+                <label for="message">Message</label>
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                <button>Submit</button>
+            </form>
         </div>
     </section>
 </body>

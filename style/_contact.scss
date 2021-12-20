@@ -1,5 +1,42 @@
 .contact-body{
-    section{
-        height:100vh;
+    img{
+        height: 100vh;
+    }
+
+    .contact-container{
+        margin-top: 2rem;
+    }
+    .contact-form{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-right: $defaultMargin;
+        margin-left: $defaultMargin;
+        h1{
+            padding-bottom: 2rem;
+        }
+        input{
+            margin-bottom: 2rem;
+            padding-bottom: .4rem;
+            padding-top: .4rem;
+        }
+        label{
+            color:$white;
+            font-family: sans-serif;
+            padding-bottom: .5rem;
+        }
+        button{
+            margin-top: $defaultMargin;
+            width: 5rem;
+            background-color: $desWhite;
+            border: none;
+            border-radius: 4px;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+
+            &:hover{
+                background-color: $white;
+            }
+        }
     }
 }
